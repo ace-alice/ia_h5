@@ -1,0 +1,278 @@
+html {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: #181c22;
+  overflow: hidden;
+  // scroll-behavior: smooth;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+}
+body {
+  background-color: #181c22;
+  font-family: PingFangSC-Regular, "微软雅黑";
+  padding: 0;
+  margin: 0;
+  color: #ccc;
+  height: 100%;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    width: 0 !important;
+    height: 0 !important;
+    display: none;
+  }
+}
+#app {
+  background-color: #181c22;
+  height: 100%;
+  overflow: auto;
+}
+
+div::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+  display: none;
+}
+
+.notify-content {
+  display: flex;
+  flex-direction: revert !important;
+  width: 266px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  background: #3b4045 !important;
+  border-radius: 8px !important;
+  left: calc(50% - 110px) !important;
+  bottom: 60px !important;
+  top: auto !important;
+  justify-content: flex-start !important;
+}
+
+.notify-content img {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 24px !important;
+}
+
+.notify-content div {
+  margin-top: 0 !important;
+  font-family: PingFangSC-Medium !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  padding-right: 30px !important;
+  text-align: left !important;
+}
+
+.notify-warn {
+  left: 0 !important;
+}
+
+.notify-color {
+  color: #ffffff4c !important;
+}
+
+.bet-toast-content {
+  display: flex;
+  flex-direction: revert !important;
+  width: 312px !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 !important;
+  background: #3b4045 !important;
+  border-radius: 8px !important;
+  bottom: 70px !important;
+  top: auto !important;
+  justify-content: flex-start !important;
+}
+
+.bet-toast-content img {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 24px !important;
+}
+
+.bet-toast-content div {
+  margin-top: 0 !important;
+  font-family: PingFangSC-Medium !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+}
+
+.message-width1 {
+  width: 160px !important;
+}
+
+.message-width2 {
+  width: 225px !important;
+}
+
+.bet-toast-message {
+  display: flex;
+  flex-direction: revert !important;
+  padding: 0 !important;
+  height: 40px !important;
+  min-height: 40px !important;
+  background: #0009 !important;
+  border-radius: 20px !important;
+  justify-content: center !important;
+  border: 1px solid #fff3;
+  z-index: 99999 !important;
+}
+
+.bet-toast-message img {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 0 6px !important;
+}
+
+.bet-toast-message div {
+  margin-top: 0 !important;
+  font-family: PingFangSC-Medium !important;
+  font-size: 14px !important;
+  font-weight: 500 !important;
+}
+
+.bet-pop {
+  color: #fff !important;
+}
+
+.bet-err {
+  color: #e1a100 !important;
+}
+
+.bet-success {
+  color: #049a04 !important;
+}
+
+.bigger {
+  background-image: linear-gradient(
+    180deg,
+    #0000 30%,
+    #2a5e487f 99%
+  ) !important;
+
+  .point {
+    color: #18fa9b !important;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-image: url("@/assets/home/home_odds_up.png");
+      background-size: 100% 100%;
+      top: 0;
+      animation: point-change 1s ease-in-out infinite;
+    }
+  }
+
+  .box-right {
+    &::before {
+      right: -4px;
+    }
+  }
+
+  .box-normal {
+    &::before {
+      left: -4px;
+    }
+  }
+}
+
+.bigger-border {
+  border: 1px solid #358f69ff !important;
+}
+
+.smaller {
+  background-image: linear-gradient(
+    180deg,
+    #0000 30%,
+    #702b1e7f 99%
+  ) !important;
+
+  .point {
+    color: #fd3029 !important;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      height: 16px;
+      width: 16px;
+      background-image: url("@/assets/home/home_odds_down.png");
+      background-size: 100% 100%;
+      top: 0;
+      animation: point-change 1s ease-in-out infinite;
+    }
+  }
+
+  .box-right {
+    &::before {
+      right: -4px;
+    }
+  }
+
+  .box-normal {
+    // padding-right: 4px;
+
+    &::before {
+      left: -4px;
+    }
+  }
+}
+
+.box-column {
+  padding: 0;
+}
+
+.smaller-border {
+  border: 1px solid #fe3c03 !important;
+}
+
+.btn-hover-active {
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px var(--color-theme-primary);
+  }
+
+  &:active {
+    transform: translateY(-0.5px);
+    box-shadow: 0 0.5px var(--color-theme-primary);
+  }
+}
+
+@keyframes point-change {
+  0% {
+    transform: translateY(2px);
+  }
+
+  50% {
+    transform: translateY(-2px);
+  }
+
+  100% {
+    transform: translateY(2px);
+  }
+}
+
+.bet-popup {
+  height: 100% !important;
+  width: 100% !important;
+  max-width: unset !important;
+  background-color: #181c22 !important;
+}
+
+.xgplayer-skin-default.xgplayer-rotate-fullscreen {
+  position: fixed !important;
+  z-index: 99999 !important;
+}
+
+.van-overlay {
+  backdrop-filter: blur(5px);
+}
